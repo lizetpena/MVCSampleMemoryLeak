@@ -39,8 +39,8 @@ namespace SampleLeak.Models
             Id = id.ToString();
             if (addBinaryData)
             {
-                //approx 10MB of an empty byte array allocated in memory when User object is constructed with addBinaryData flag set to true
-                BinaryData = new byte[10 *1024 * 1024];
+                //approx ~1GB of an empty byte array allocated in memory when User object is constructed with addBinaryData flag set to true
+                BinaryData = new byte[1024 *1024 * 1024]; 
             }
         }
 
